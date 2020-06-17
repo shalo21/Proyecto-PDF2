@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.MenuInicialController">
+   <effect>
+      <ColorAdjust />
+   </effect>
+   <children>
+      <Button fx:id="botonRedo" layoutX="1033.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleRedo" prefHeight="131.0" prefWidth="136.0" text="redo">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@redo.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="botonUndo" layoutX="772.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleUndo" prefHeight="60.0" prefWidth="149.0" text="undo">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@undo.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <ImageView fx:id="imagenPDF" fitHeight="892.0" fitWidth="975.0" layoutX="678.0" layoutY="172.0" onDragDetected="#handleImagenPdf" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="btnBuscar" layoutX="1657.0" layoutY="351.0" mnemonicParsing="false" text="Abrir imagen del PDF" />
+      <Button fx:id="button" layoutX="1657.0" layoutY="428.0" mnemonicParsing="false" onAction="#ModoRect" prefHeight="26.0" prefWidth="129.0" text="Dibujar" />
+      <Canvas fx:id="canv" height="892.0" layoutX="678.0" layoutY="172.0" width="975.0" />
+   </children>
+</AnchorPane>
