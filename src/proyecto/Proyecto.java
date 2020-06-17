@@ -24,6 +24,7 @@ public class Proyecto extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
+        System.out.println("hola");
         Parent root = FXMLLoader.load(getClass().getResource("MenuInicial.fxml"));
         Scene scene = new Scene(root);
         
